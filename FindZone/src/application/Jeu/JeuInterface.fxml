@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="leBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #1090BB;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Jeu.JeuController">
+   <top>
+      <AnchorPane prefHeight="113.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="124.0" prefWidth="800.0">
+               <children>
+                  <Label fx:id="question" text="Quelle est la voiture familiale ?" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Line endX="100.0" startX="-400.0" stroke="WHITE" strokeWidth="3.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Line>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="273.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="image" fitHeight="300.0" fitWidth="500.0" layoutX="21.0" layoutY="7.0" onMouseClicked="#repondreQuestion" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../IMAGE/404.jpg" />
+               </image>
+            </ImageView>
+            <Canvas id="zoneReponse" fx:id="zoneReponse" disable="true" height="300.0" layoutX="20.0" layoutY="3.0" width="500.0" />
+            <Label fx:id="scoreTexte" layoutX="562.0" layoutY="104.0" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="progressionTexte" layoutX="562.0" layoutY="175.0" text="Progression :" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="questionSuivante" layoutX="611.0" layoutY="413.0" mnemonicParsing="false" onAction="#btnQuestionSuivante" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #FF8207;" text="Question suivante" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text fx:id="temps" layoutX="19.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="496.072265625">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text fx:id="tempsChrono" layoutX="637.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="                              ">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Label fx:id="scoreTexte1" layoutX="562.0" layoutY="265.0" text="Nombre d'erreur :" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="erreur1" fitHeight="42.0" fitWidth="54.0" layoutX="577.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/croix.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="erreur2" fitHeight="42.0" fitWidth="54.0" layoutX="646.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/croix.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="erreur3" fitHeight="42.0" fitWidth="54.0" layoutX="712.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/images/croix.png" />
+               </image>
+            </ImageView>
+            <ProgressBar fx:id="progression" layoutX="564.0" layoutY="214.0" prefWidth="200.0" progress="0.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ProgressBar>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

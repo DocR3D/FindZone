@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="leBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #b1a1a1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.PresentationController">
+   <bottom>
+      <Pane prefHeight="90.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="272.0" layoutY="11.0" text="Etes vous prêt ?">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="RetourMenu" layoutX="53.0" layoutY="21.0" mnemonicParsing="false" onAction="#LancerMenu" prefHeight="40.0" prefWidth="170.0" styleClass="boutonColorier" stylesheets="@../application/application.css" text="Retour au menu" textFill="WHITE" />
+            <Button fx:id="Jouer" layoutX="576.0" layoutY="21.0" mnemonicParsing="false" onAction="#jouer" prefHeight="40.0" prefWidth="170.0" styleClass="boutonColorier" stylesheets="@../application/application.css" text="Jouer" textFill="WHITE" />
+         </children>
+      </Pane>
+   </bottom>
+   <top>
+      <Pane prefHeight="151.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="nomTheme" alignment="CENTER" layoutX="-3.0" layoutY="-20.0" prefHeight="88.0" prefWidth="806.0" text="Nom Thème" textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </Label>
+            <Separator layoutX="149.0" layoutY="81.0" prefHeight="3.0" prefWidth="500.0" />
+            <Label fx:id="unAuteur" layoutX="331.0" layoutY="98.0" text="Auteur :" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="auteur" layoutX="420.0" layoutY="98.0" text="Kevin" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <VBox fx:id="image" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imageTheme" fitHeight="238.0" fitWidth="428.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox fx:id="info" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text fx:id="duTexte" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1ère réponse : 100 pts&#10;2ème réponse : 50 pts&#10;3ème réponse : 25 pts&#10;Autre : 0 pts">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="seconde" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Si temps &lt;= 2 sec +10 pts&#10;Si 2 sec &lt; temps &lt;= 4 sec +5 pts " textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Text>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
